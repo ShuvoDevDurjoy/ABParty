@@ -1,0 +1,130 @@
+.dynamic_link_container{
+    font-weight: 600;
+}
+.dynamic_link_right_arrow{
+    width: 25px;
+    height: 20px;
+    transform: translateX(0px);
+    transition: transform .2s ease-out;
+}
+
+.dynamic_link_container a{
+    padding: 10px 20px;
+    border-radius: 1.5rem;
+    display: inline-flex;
+    z-index: 12;
+}
+
+.dynamic_link_container:hover .dynamic_link_right_arrow{
+    transform: translateX(5px);
+    transition: transform .2s ease-out;
+}
+
+
+
+
+/* Navbar container */
+.drop_down_title{
+    padding: 10px 8px;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 476px){
+    .drop_down_title{
+        padding: 10px 20px;
+    }
+}
+
+.menu_drop_down_item{
+    z-index: 100;
+}
+
+.menu_drop_down_item.active .drop_down_title{
+    background-color: var(--cl-green);
+}
+.menu_drop_down_item.active .drop_down_title h3{
+    color: white;
+}
+.drop_down_lists{
+    /* visibility: hidden; */
+    position: absolute;
+    /* height: clamp(350px, 50vw, 650px); */
+    top: 100%;
+    padding-top: 25px;
+    display: none;
+    z-index: 100;
+}
+
+.menu_drop_down_item{
+    position: relative;;
+}
+
+.drop_down_inner_container{
+    background-color: #0c432d;
+    height: calc( var(--image-size) + 30px );
+    border-radius: 1rem;
+    padding-block: 10px;
+}
+
+.menu_drop_down_item.active .drop_down_lists{
+    display: block;
+    height: var(--image-size);
+}
+
+.arrow_span{
+    width: 40px;
+    /* height: clamp(20px, 6vw, 40px); */
+    height: 40px;
+    padding: 5px 5px;
+    transform: translate(0px, 0px);
+    transition: transform .2s ease-out;
+}
+
+.arrow_span_image{
+    transform: rotateZ(-45deg);
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 786px){
+    .arrow_span{
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.drop_down_item{
+    padding: 5px 10px;
+    border-radius: 5px;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.drop_down_item p{
+    transform: translate(0px, 0px);
+    transition: transform .2s ease-out;
+}
+
+.drop_down_item:hover p{
+    transform: translate(3px, -2px);
+    transition: transform .2s ease-out;
+}
+
+.drop_down_item:hover .arrow_span{
+    transform: translate(-3px, 2px);
+    transition: transform .2s ease-out;
+}
+
+
+
+.start_icons_container{
+    width: 100%;
+    padding-inline: 40px;
+    padding-block: 40px;
+}
+
+.start_icon{
+    width: 25px;
+    height: 25px;
+}

@@ -1,0 +1,226 @@
+.navbar_main_container{
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.navbar_inner_container{
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+}
+
+
+.nav_logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.party_name{
+    white-space: nowrap;
+}
+
+.nav_logo_link{
+    content: '';
+    display: block;
+    width: clamp(80px, 10vw, 100px);
+    aspect-ratio: 1 / 1;
+}
+
+
+.language_selection_container{
+    width: 100px;
+    height: 60px;
+    border-radius: 1rem;
+    overflow: hidden;
+    z-index: 10;
+    background-image: url('/ABParty/icons/bg_banner_1.png');
+    background-size: 100% 100%;
+    padding-inline: 10px;
+    justify-content: space-around;
+}
+
+.nav_utility_links_inner{
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav_right_container{
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+
+.lang_en, .lang_bn{
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav_bottom_container{
+    padding: 5px 5px;
+    background-color: rgba(221, 219, 219, 0.922);
+}
+
+@media screen and (max-width: 876px){
+    .nav_utility_links{
+        display: none;
+    }
+    .party_name{
+        display: None;
+    }
+    .nav_bottom_container{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 480px){
+
+    .language_selection_container{
+        height: 50px;
+    }
+}
+
+.menu{
+    display: none;
+}
+
+.menu.active{
+    display: block;
+}
+
+
+.menu_container{
+    width: 40px;
+    height: 40px;
+    padding: 10px 10px;
+    display: block;
+    content: '';
+    cursor: pointer;
+}
+
+.nav_drop_down{
+    top: 100%;
+    z-index: 300;
+    background-color: white;
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    overflow: hidden; 
+    transition: .2s ease-out;;  
+}
+
+.nav_drop_down::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--cl-green);
+}
+
+.nav_drop_down.active{
+    transform: scaleY(1);
+    transition: .2s ease-out;
+}
+
+.drop_menu_inner_container{
+    padding: 20px 10px;
+
+}
+
+.none{
+    display: none;
+}
+
+.down_arrow{
+    rotate: 90deg;
+    width: 25px;
+    height: 25px;;
+}
+
+.sub_link_drop_down_container{
+    padding-top: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.sub_link_drop_down{
+    padding: 20px 20px;
+    border-radius: .5rem;
+    background-color: white;
+    transform: scaleY(0);
+    transition: .2s ease-out;
+    transform-origin: top;
+    overflow: hidden;
+}
+
+.mobile_sub_link_drop_down_container{
+    transform-origin: top;
+    max-height: 0px;
+    transition: .5s ease-out;
+}
+
+.mobile_sub_link_drop_down_container.active{
+    max-height: 500px;
+    transition: 1s ease-out;
+}
+
+.mobile.sub_link_drop_down{
+    display: inline-block;
+}
+
+.hidden{
+    overflow: hidden;
+}
+
+.sub_link_container{
+    cursor: pointer;
+    height: max-content;
+}
+
+.sub_link_container:hover .sub_link_drop_down{
+    transform: scaleY(1);
+    transition: .2s ease-out;
+}
+
+.sub_links{
+    padding: 5px 10px;
+    transition: .2s ease-out;
+}
+
+.sub_links_text{
+    display: block;
+    transform: translate(0px, 0px);
+    transition: .2s ease-out;
+}
+
+.sub_links:hover .sub_links_text{
+    display: block;
+    transform: translate(2px, -2px);
+    transition: .2s ease-out;
+}
+
+.sub_links::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--cl-green);
+    height: 1px;
+    width: 100%;
+}

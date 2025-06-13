@@ -1,0 +1,33 @@
+.menu_item_banner_container{
+    padding-block: 40px;
+    padding-top: 0px;
+}
+
+.menu_drop_down_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.r_0{
+    right: 0px;
+}
+.b_0{
+    bottom: 0px;
+}
+.l_0{
+    left: 0px;
+}
+
+@media screen and (max-width: 978px){
+
+    .menu_drop_down_item{
+        position: static;
+    }
+    .r_0{
+        left: 10px;
+    }
+    .l_0{
+        left: 10px;
+    }
+
+}

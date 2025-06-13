@@ -1,0 +1,48 @@
+.hero_main_container{
+    width: 100%;
+    height: calc( var(--image-size) - 50px);
+}
+
+.hero_main_container::after{
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.945));
+    top: 0;
+    z-index: 10;
+}
+
+.hero_content{
+    width: 100%;
+    bottom: 0px;
+    gap: 60px;
+    padding: 20px 40px;
+    align-items: flex-end;
+    z-index: 20;
+    font-weight: 900;
+}
+
+.join_button{
+    padding: 10px 20px;
+    font-size: 28px;
+    font-weight: 600;
+    border-radius: 1.5rem;
+    bottom: 20px;
+    right: 20px;
+    white-space: nowrap;
+}
+
+.hero_content h1{
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px){
+    .hero_content{
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 30px 20px;
+    }
+}
