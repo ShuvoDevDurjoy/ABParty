@@ -119,6 +119,9 @@ const Footer = () => {
                 <a className="social_icon relative" href="/">
                   <Image src="./icons/instagram.png" fill alt="instagram_icon" />
                 </a>
+                <a className="social_icon relative" href="/">
+                  <Image src="./icons/tiktok.png" fill alt="tiktok" />
+                </a>
               </div>
               <div className="flex fl_dir_col gap_10">
                 <DynamicLink
